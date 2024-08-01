@@ -1,4 +1,4 @@
-if SHIELD_VOLTARIUM_LEFT
+if SHIELD_VOLTARIUM_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "Voltarium"
