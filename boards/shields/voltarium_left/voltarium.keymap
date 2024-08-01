@@ -2,6 +2,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+	behaviors {
+		rot_kp: sensor_rotate_kp {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			#sensor-binding-cells = <2>;
+			bindings - <&kp>, <&kp>;
+		}
+	}
+
 	keymap {
 		compatible = "zmk,keymap";
 		
@@ -11,7 +19,9 @@
 				&kp N2 &kp S &kp D &kp F &kp G &kp H &kp A &kp S &kp D &kp F &kp G &kp N7
 				&kp N3 &kp W &kp E &kp R &kp T &kp Y &kp Q &kp W &kp E &kp R &kp T &kp N8
 				&kp N4 &kp S &kp D &kp F &kp G &kp H &kp A &kp S &kp D &kp F &kp G &kp N9
+				&kp N0 &kp N5
 			>;
+			sensor-bindings = <&rot_kp PG_UP PG_DN>;
 		};
 	};
 };
