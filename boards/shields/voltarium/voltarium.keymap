@@ -31,7 +31,7 @@
 			bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
 		};
 
-		rot_kp: sensor_rotate_kp {
+		rot_pg_ud_kp: sensor_rotate_kp {
 			compatible = "zmk,behavior-sensor-rotate";
 			#sensor-binding-cells = <2>;
 			bindings = <&kp PG_DN>, <&kp PG_UP>;
@@ -84,7 +84,7 @@
 				&mo BT &kp LALT &none &bspc_del &kp LGUI &brace_tap &paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
 				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&rot_kp, >;
+			sensor-bindings = <&rot_kp, &rot_pg_ud_kp>;
 		};
 
 		numbers {
