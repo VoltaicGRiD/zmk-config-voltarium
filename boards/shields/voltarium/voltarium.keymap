@@ -4,9 +4,26 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define BT 1
+#define NUM 1
+#define BT 2
 
 / {
+	combos {
+        compatible = "zmk,combos";
+    };
+
+	macros {
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+
 	behaviors {
 		rot_kp: sensor_rotate_kp {
 			compatible = "zmk,behavior-sensor-rotate-var";
@@ -20,6 +37,34 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+		tab_num: tap_dance_0 {
+			compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp TAB>, <&tog NUM>;
+		};
+		
+		brace_tap: tap_dance_1 {
+			compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+		};
+
+		paren_tap: tap_dance_2 {
+			compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+		};
+
+		alt_tap: tap_dance_3 {
+			compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+		};
 	};
 
 	keymap {
@@ -27,13 +72,23 @@
 		
 		default_layer {
 			bindings = <
-				&kp TAB &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp SEMI &kp DEL
+				&tab_num &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp SEMI &kp MINUS
 				&kp LC(ESC) &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O &kp APOS
 				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &kp RA(RETURN)
-				&mo BT &none &none &kp BACKSPACE &none &kp SPACE &kp DELETE &none &kp SPACE &none &none &none
+				&mo BT &alt_tab &none &bspc_del &kp LGUI &brace_tap &kp paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
 				&kp N0 &kp N5
 			>;
 			sensor-bindings = <&rot_kp PG_UP PG_DN>;
+		};
+
+		numbers {
+			bindings = <
+				&kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp MINUS &kp PLUS
+				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&trans &trans
+			>;
 		};
 
 		bluetooth {
