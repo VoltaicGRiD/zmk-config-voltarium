@@ -29,8 +29,8 @@
 			bindings = <
 				&kp TAB &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp SEMI &kp DEL
 				&kp LC(ESC) &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O &kp APOS
-				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &kp RA(RET)
-				&mo BT &none &none &kp SPACE &none &kp BACKSPACE &kp DELETE &none &kp SPACE &none &none &none
+				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &kp RA(RETURN)
+				&mo BT &none &none &kp BACKSPACE &none &kp SPACE &kp DELETE &none &kp SPACE &none &none &none
 				&kp N0 &kp N5
 			>;
 			sensor-bindings = <&rot_kp PG_UP PG_DN>;
@@ -46,4 +46,4 @@
 			>;
 		};
 	};
-};
+};x
