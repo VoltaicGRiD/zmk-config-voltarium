@@ -1,5 +1,9 @@
 #include "voltarium.dtsi" // Notice that the main dtsi files are included in the overlay.
 
+&default_transform {
+	col-offset = <6>;
+};
+
 &default_kscan {
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH> // col1 in the schematic

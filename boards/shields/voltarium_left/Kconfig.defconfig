@@ -1,6 +1,16 @@
 if SHIELD_VOLTARIUM_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Voltarium (Left)"
+	default "Voltarium"
 	
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_VOLTARIUM_LEFT || SHIELD_VOLTARIUM_RIGHT
+
+config ZMK_SPLIT
+    default y
+
 endif
