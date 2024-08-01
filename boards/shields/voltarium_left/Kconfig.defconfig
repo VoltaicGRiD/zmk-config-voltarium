@@ -1,0 +1,6 @@
+if SHIELD_VOLTARIUM_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Voltarium (Left)"
+	
+endif

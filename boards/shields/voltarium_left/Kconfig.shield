@@ -1,0 +1,2 @@
+config SHIELD_VOLTARIUM_LEFT
+	def_bool $(shields_list_contains, voltarium_left)
