@@ -26,9 +26,15 @@
 
 	behaviors {
 		rot_kp: sensor_rotate_kp {
-			compatible = "zmk,behavior-sensor-rotate-var";
+			compatible = "zmk,behavior-sensor-rotate";
 			#sensor-binding-cells = <2>;
-			bindings = <&kp>, <&kp>;
+			bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+		};
+
+		rot_kp: sensor_rotate_kp {
+			compatible = "zmk,behavior-sensor-rotate";
+			#sensor-binding-cells = <2>;
+			bindings = <&kp PG_DN>, <&kp PG_UP>;
 		};
 
 		bspc_del: backspace_delete {
@@ -73,12 +79,12 @@
 		default_layer {
 			bindings = <
 				&tab_num &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp SEMI &kp MINUS
-				&kp LC(ESC) &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O &kp APOS
-				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &kp RA(RETURN)
-				&mo BT &alt_tab &none &bspc_del &kp LGUI &brace_tap &paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
-				&kp N0 &kp N5
+				&mt LCTRL ESC &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O &kp APOS
+				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &mt RALT RETURN	
+				&mo BT &kp LALT &none &bspc_del &kp LGUI &brace_tap &paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
+				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&rot_kp PG_UP PG_DN>;
+			sensor-bindings = <&rot_kp, >;
 		};
 
 		numbers {
