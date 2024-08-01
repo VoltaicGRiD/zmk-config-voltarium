@@ -1,5 +1,5 @@
 config SHIELD_VOLTARIUM_LEFT
-	def_bool $(shields_list_contains, voltarium_left)
+	def_bool $(shields_list_contains,voltarium_left)
 
 config SHIELD_VOLTARIUM_RIGHT
-	def_bool $(shields_list_contains, voltarium_right)
+	def_bool $(shields_list_contains,voltarium_right)
