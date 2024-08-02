@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             bindings = <&mo NAV>, <&nav_brace_tap>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-		}
+		};
 
 		esc_ctl_num: tap_dance_0 {
 			compatible = "zmk,behavior-tap-dance";
