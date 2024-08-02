@@ -76,7 +76,7 @@
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTRL ESC>, <&tog NUM>;
+            bindings = <&ht_hp LCTRL ESC>, <&tog NUM>;
 		};
 		
 		nav_brace_tap: tap_dance_1 {
