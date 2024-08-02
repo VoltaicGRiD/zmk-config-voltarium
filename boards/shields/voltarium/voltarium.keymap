@@ -27,13 +27,13 @@
 	behaviors {
 		rot_kp: rot_kp {
 			compatible = "zmk,behavior-sensor-rotate";
-			#sensor-binding-cells = <2>;
+			#sensor-binding-cells = <0>;
 			bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
 		};
 
 		rot_pg_ud_kp: rot_pg_ud_kp {
 			compatible = "zmk,behavior-sensor-rotate";
-			#sensor-binding-cells = <2>;
+			#sensor-binding-cells = <0>;
 			bindings = <&kp PG_DN>, <&kp PG_UP>;
 		};
 
