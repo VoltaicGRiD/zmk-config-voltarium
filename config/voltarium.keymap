@@ -105,7 +105,7 @@
 				&mo BT &kp LALT &mo NUM &bspc_del &kp LGUI &nav_brace &paren_tap &tog QWERTY &kp SPACE &mo NUM &none &kp RGUI
 				&kp C_PLAY_PAUSE &kp F1
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;&mo NUM
+			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
 		};
 
 		qwerty_layer {
