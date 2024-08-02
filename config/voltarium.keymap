@@ -11,10 +11,6 @@
 #define BT 3
 
 / {
-	combos {
-        compatible = "zmk,combos";
-    };
-
 	macros {
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
