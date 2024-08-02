@@ -75,21 +75,21 @@
 		esc_ctl_num: tap_dance_0 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&ht_hp LCTRL ESC>, <&tog NUM>;
 		};
 		
 		nav_brace_tap: tap_dance_1 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
 			bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
 		};
 
 		paren_tap: tap_dance_2 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
 		};
 	};
