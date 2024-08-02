@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-
 #define DEFAULT 0
 #define QWERTY 1
 #define NUM 2
@@ -38,7 +37,7 @@
 		rot_kp: rot_kp {
 			compatible = "zmk,behavior-sensor-rotate";
 			#sensor-binding-cells = <0>;
-			bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+			bindings = <&kp K_VOL_DN>, <&kp K_VOL_UP>;
 		};
 
 		rot_pg_ud_kp: rot_pg_ud_kp {
@@ -50,7 +49,7 @@
 		scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc MOVE_UP>, <&msc MOVE_DOWN>;
             tap-ms = <50>;
         };
 
@@ -101,7 +100,7 @@
 				&mo BT &kp LALT &none &bspc_del &kp LGUI &brace_tap &paren_tap &tog QWERTY &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
 				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_pg_ud_kp>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		qwerty_layer {
@@ -112,7 +111,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_pg_ud_kp>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		numbers_layer {
@@ -123,7 +122,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_pg_ud_kp>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 
 		};
 
@@ -135,7 +134,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_pg_ud_kp>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 	};
 };
