@@ -84,7 +84,7 @@
 				&mo BT &kp LALT &none &bspc_del &kp LGUI &brace_tap &paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
 				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&rot_kp &rot_pg_ud_kp>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		numbers {
@@ -95,6 +95,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		bluetooth {
@@ -105,6 +106,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(Y) LC(Z)>;
 		};
 	};
 };
