@@ -60,11 +60,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-		tab_num: tap_dance_0 {
+		esc_ctl_num: tap_dance_0 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp TAB>, <&tog NUM>;
+            bindings = <&mt LCTRL ESC>, <&tog NUM>;
 		};
 		
 		brace_tap: tap_dance_1 {
