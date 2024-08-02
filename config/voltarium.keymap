@@ -27,20 +27,32 @@
 		rot_kp: rot_kp {
 			compatible = "zmk,behavior-sensor-rotate";
 			#sensor-binding-cells = <0>;
+			#binding-cells = <0>;
+
 			bindings = <&kp K_VOL_DN>, <&kp K_VOL_UP>;
 		};
 
 		rot_pg_ud_kp: rot_pg_ud_kp {
 			compatible = "zmk,behavior-sensor-rotate";
 			#sensor-binding-cells = <0>;
+			#binding-cells = <0>;
 			bindings = <&kp PG_DN>, <&kp PG_UP>;
 		};
+
+		scroll_encoder_new: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+			#binding-cells = <0>;
+            bindings = <&msc MOVE_UP>, <&msc MOVE_DOWN>;
+            tap-ms = <100>;
+        };
 
 		scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc MOVE_UP 5 5>, <&msc MOVE_DOWN 5 5>;
-            tap-ms = <50>;
+			#binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <100>;
         };
 
 		bspc_del: backspace_delete {
@@ -80,10 +92,10 @@
 				&kp TAB &kp Q &kp W &kp F &kp P &kp G &kp J &kp L &kp U &kp Y &kp SEMI &kp MINUS
 				&esc_ctl_num &kp A &kp R &kp S &kp T &kp D &kp H &kp N &kp E &kp I &kp O &kp APOS
 				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp K &kp M &kp COMMA &kp PERIOD &kp FSLH &mt RALT RETURN	
-				&mo BT &kp LALT &mo NUM &bspc_del &kp LGUI &brace_tap &paren_tap &tog QWERTY &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
+				&mo BT &kp LALT &mo NUM &bspc_del &kp LGUI &brace_tap &paren_tap &tog QWERTY &kp SPACE &mo NUM &none &kp RGUI
 				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
+			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
 		};
 
 		qwerty_layer {
@@ -94,7 +106,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
+			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
 		};
 
 		numbers_layer {
@@ -105,7 +117,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
+			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
 
 		};
 
@@ -117,7 +129,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
+			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
 		};
 	};
 };
