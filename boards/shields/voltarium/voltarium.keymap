@@ -84,7 +84,7 @@
 				&mo BT &kp LALT &none &bspc_del &kp LGUI &brace_tap &paren_tap &kp RGUI &kp SPACE &kp RIGHT_PARENTHESIS &none &kp RGUI
 				&kp K_PLAY_PAUSE &kp K_MUTE
 			>;
-			sensor-bindings = <&rot_kp, &rot_pg_ud_kp>;
+			sensor-bindings = <&rot_kp &rot_pg_ud_kp>;
 		};
 
 		numbers {
