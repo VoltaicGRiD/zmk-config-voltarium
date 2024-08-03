@@ -11,26 +11,8 @@
         ;
 };
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P01>, <SPI0_RX_P00>;
-        };
-    };
-
-    spi0_sleep: spi0_sleep {
-        group1 {
-            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P01>, <SPI0_RX_P00>;
-        };
-    };
-};
-
-nice_view_spi: &spi0 { // What do I use inplace of &spi0? nice_view_spi label is needed
-        compatible = "sparkfun,pro-micro-gpio";
-        pinctrl-0 = <&spi0_default>; // Not defaults. Do I use a list of gpios for cs, clk, mosi? e.g. P3 for MOSI, P2 for CLK, P1 for CS (on my pcb),
-        pinctrl-1 = <&spi0_sleep>; // Same GPIOs I presume, but different active state?
-        pinctrl-names = "default", "sleep";
-        cs-gpios = <&gpio 10 GPIO_ACTIVE_HIGH>; // Does gpio 4 map to P1? There is probably some macro for rp2040 pin names?
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
 };
 
 &left_encoder {
