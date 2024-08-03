@@ -48,15 +48,15 @@
             #sensor-binding-cells = <0>;
 			#binding-cells = <0>;
             bindings = <&msc MOVE_UP>, <&msc MOVE_DOWN>;
-            tap-ms = <100>;
+            tap-ms = <120>;
         };
 
 		scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
 			#binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <100>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <120>;
         };
 
 		bspc_del: backspace_delete {
@@ -113,7 +113,7 @@
 				&mo BT &lalt_esc &mo NUM &bspc_del &kp LGUI &nav_brace &paren_tap &tog QWERTY &kp SPACE &mo NUM &none &kp RGUI
 				&kp C_PLAY_PAUSE &kp F1
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		qwerty_layer {
@@ -124,7 +124,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		numbers_layer {
@@ -135,7 +135,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		navigation_layer {
@@ -146,7 +146,7 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
 		bluetooth_layer {
@@ -157,11 +157,11 @@
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans
 			>;
-			sensor-bindings = <&scroll_encoder>, <&scroll_encoder_new>;
+			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 	};
 };
 
 &nice_view_spi {
-    	cs-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
-	};
+	cs-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+};
