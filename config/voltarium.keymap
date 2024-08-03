@@ -83,7 +83,7 @@
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt LCTRL LCTRL, <&tog NUM>;
+            bindings = <&mt LCTRL LCTRL>, <&tog NUM>;
 		};
 		
 		brace_tap: tap_dance_2 {
