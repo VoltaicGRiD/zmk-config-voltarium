@@ -11,6 +11,20 @@
         ;
 };
 
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            pinmux = <SPI1_SCK_P10>, <SPI1_TX_P11>, <SPI0_RX_P20>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            pinmux = <SPI1_SCK_P10>, <SPI1_TX_P11>, <SPI0_RX_P20>;
+        };
+    };
+};
+
 nice_view_spi: &spi0 {
     cs-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
     compatible = "nordic,nrf-spim";
