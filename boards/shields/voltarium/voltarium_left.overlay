@@ -11,6 +11,20 @@
         ;
 };
 
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P1>, <SPI0_RX_P0>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P1>, <SPI0_RX_P0>;
+        };
+    };
+};
+
 nice_view_spi: &spi0 { // What do I use inplace of &spi0? nice_view_spi label is needed
         compatible = "sparkfun,pro-micro-gpio";
         pinctrl-0 = <&spi0_default>; // Not defaults. Do I use a list of gpios for cs, clk, mosi? e.g. P3 for MOSI, P2 for CLK, P1 for CS (on my pcb),
