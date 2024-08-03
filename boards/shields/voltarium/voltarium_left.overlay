@@ -14,13 +14,13 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P1>, <SPI0_RX_P0>;
+            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P01>, <SPI0_RX_P00>;
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
-            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P1>, <SPI0_RX_P0>;
+            pinmux = <SPI1_CSN_P10>, <SPI1_TX_P01>, <SPI0_RX_P00>;
         };
     };
 };
