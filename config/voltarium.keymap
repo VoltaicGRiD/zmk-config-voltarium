@@ -79,21 +79,21 @@
             bindings = <&kp LALT>, <&kp ESC>;
 		};
 
-		lctrl_num: tap_dance_0 {
+		lctrl_num: tap_dance_1 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&mt LCTRL LCTRL, <&tog NUM>;
 		};
 		
-		brace_tap: tap_dance_1 {
+		brace_tap: tap_dance_2 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
 			bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
 		};
 
-		paren_tap: tap_dance_2 {
+		paren_tap: tap_dance_3 {
 			compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
