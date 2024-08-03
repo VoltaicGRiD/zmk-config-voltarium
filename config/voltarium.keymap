@@ -69,7 +69,7 @@
 			compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&brace_tap>, <&tog NAV>;
-            mods = <(MOD_LCTRL|MOD_RCTRL);
+            mods = <(MOD_LCTL|MOD_LSFT)>;
 		};
 
 		lalt_esc: tap_dance_0 {
