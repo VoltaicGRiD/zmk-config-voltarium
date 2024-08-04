@@ -123,7 +123,7 @@
 
 		numbers_layer {
 			bindings = <
-				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp PLUS
+				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
 				&kp TILDE &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PRCNT &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp UNDER
 				&kp LSHFT &kp PIPE &kp BSLH &kp FSLH &kp LBRC &kp LBKT &kp RBKT &kp RBRC &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
