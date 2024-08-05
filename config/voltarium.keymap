@@ -13,6 +13,7 @@
 #define FUN 3
 #define NAV 4
 #define BT 5
+#define QWERTYREV 6
 
 / {
 	macros {
@@ -38,6 +39,12 @@
 			timeout-ms = <50>;
 			key-positions = <16 19>;
 			bindings = <&kp ESC>;
+		};
+
+		combo_swap {
+			timeout-ms = <50>;
+			key-positions = <1 2>;
+			bindings = <&tog QWERTYREV>;
 		};
 	};
 	
@@ -134,7 +141,6 @@
 			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
 		};
 
-
 		numbers_layer {
 			bindings = <
 				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
@@ -177,6 +183,17 @@
 				&trans &trans
 			>;
 			sensor-bindings = <&scroll_encoder>, <&rot_kp>;
+		};
+
+		qwerty_reversed_layer {
+			bindings = <
+				&kp MINUS &kp P &kp O &kp I &kp U &kp Y &kp T &kp R &kp E &kp W &kp Q &kp TAB
+				&kp APOS &kp SEMI &kp L &kp K &kp J &kp H &kp G &kp F &kp D &kp S &kp A &kp LCTRL
+				&mt RALT RETURN &kp FSLH &kp PERIOD &kp COMMA &kp M &kp N &kp B &kp V &kp C &kp X &kp Z &kp LSHFT	
+				&none &mo FUN &tog NUM &kp SPACE &tog COLEMAK &mo NAV &mo NAV &kp LGUI &bspc_del &mo NUM &lalt_esc &mo BT
+				&trans &trans
+			>;
+			sensor-bindings = <&rot_kp>, <&scroll_encoder>;
 		};
 	};
 };
