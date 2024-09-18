@@ -15,11 +15,6 @@
 #define BT 5
 #define QWERTYREV 6
 
-
-&soft_off {
-    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-};
-
 / {
 	macros {
         alt_tab: alt_tab {
@@ -45,6 +40,12 @@
 			key-positions = <16 19>;
 			bindings = <&kp ESC>;
 		};
+
+		combo_capslock {
+			timeout-ms = <50>;
+			key-positions = <13 25>;
+			bindings = <&kp CAPS>;
+		}
 
 		combo_swap {
 			timeout-ms = <50>;
